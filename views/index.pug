@@ -3,3 +3,13 @@ extends layout
 block content
   h1= title
   p Welcome to my world I am Radhika Reddy Ganta#{title}
+  button(type="button", class="btn btn-secondary", onclick="update()") PresMe
+
+  div#target Display
+
+  script. 
+      var client_count = 0;
+          function update(){
+          client_count++;
+          document.getElementbyId("target").innerHTML =client_count;
+          };
