@@ -4,4 +4,4 @@ class Eggfry
 attributes:
 Onions(number),
 spices(String),
-
+currry(String)
