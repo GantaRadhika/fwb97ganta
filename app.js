@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var EggfryRouter = require('./routes/Eggfry');
 var addmodsRouter = require('./routes/addmods');
+var slectorRouter = require('./routes/selector');
 var app = express();
 
 // view engine setup
@@ -24,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/Eggfry', EggfryRouter);
 app.use('/addmods', addmodsRouter);
+app.use('/selector', slectorRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

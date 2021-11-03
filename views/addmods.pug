@@ -10,17 +10,17 @@ block content
   - let cols=Number(query.cols)
   <br>
   if (!(Number.isInteger(rows)) ||! (Number.isInteger(cols)))
-    p not integer values
+    p values are not in number 
   else if rows>6
-    p out of the range 
+    p beyond the boundary rows
   else if cols>6
-    p out of the range 
+    p beyond the boundary cols
   else 
     table#outer
-      - for(let i=0;i<rows;i++){
+      - for(let k=0;k<rows;k++){
           tr#middle
-            - for(let j=0;j<cols;j++){
-                td= i+j%rows
+            - for(let l=0;l<cols;l++){
+                td= k+l%rows
             -}
 
       -}  
