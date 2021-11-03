@@ -2,5 +2,26 @@ extends layout
 
 block content
   h1= title
- 
+  h1= title
+  p number of rows   : #{query.rows};
+  p number of colums: #{query.cols};
+  <br>
+  - let rows=Number(query.rows)
+  - let cols=Number(query.cols)
+  <br>
+  if (!(Number.isInteger(rows)) ||! (Number.isInteger(cols)))
+    p not integer values
+  else if rows>6
+    p out of the range 
+  else if cols>6
+    p out of the range 
+  else 
+    table#outer
+      - for(let i=0;i<rows;i++){
+          tr#middle
+            - for(let j=0;j<cols;j++){
+                td= i+j%rows
+            -}
+
+      -}  
        
