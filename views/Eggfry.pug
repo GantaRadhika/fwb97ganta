@@ -2,6 +2,12 @@ extends layout
 
 block content
   h1= title
-  
+  - var r=0
+  - var arr=[[2,"hot","eggburji"],[3,"medium","eggmasala"],[4,"light","eggtikka"]]
+  each a in arr
+      div(class="container")
+          div(class="col-sm-2") #{a[0]}
+          div(class="col-sm-2") #{a[1]}
+          div(class="col-sm-2") #{a[2]}
           
        
